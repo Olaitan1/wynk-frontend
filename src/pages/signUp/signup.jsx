@@ -69,7 +69,8 @@ const SignupPage = () =>
                 <form onSubmit={handleSubmit} className='form'>
                     {errorMessage && <span>{errorMessage}</span>}
                     {successMessage && <p>{successMessage}</p>}
-                    <label>
+                    <div className='signing'>
+                        <label>
                         Username:
                         <input
                             type="text"
@@ -112,10 +113,11 @@ const SignupPage = () =>
                             onChange={handleChange}
                         />
                     </label>
+                   
                     <button type="submit" className='btn01'>Sign Up</button>
                     <br />
                     <button type='button' className='btn02' onClick={() => Navigate('/login')}>Login</button>
-
+                </div>
                 </form>
             </div>
         </React.Fragment>
